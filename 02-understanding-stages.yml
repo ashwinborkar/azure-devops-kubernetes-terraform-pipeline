@@ -21,11 +21,12 @@ stages:
   - job: SecondJob
     steps:
     - bash: echo build SecondJob
-    variables:
-      environment: Dev
-      displayName: 'Run a one-line script'
+
       
 - stage: Test
+  variables:
+    environment: Dev
+    displayName: 'Run a one-line script'
   dependsOn: Build
   jobs:
   - job: FirstJob
