@@ -16,7 +16,7 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo build FirstJob
-    - bash: echo $(PipelineLevelVariable)
+    - bash: echo $(PIPELINELEVELVARIABLE)
       displayName: 'Run a one-line script'
   - job: SecondJob
     steps:
