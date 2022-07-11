@@ -22,6 +22,7 @@ jobs:
       echo some other informatin
     displayName: 'Run a multi-line script'
 - job: job2
+  dependsOn: job1
   steps:
   - script: echo Hello, world changed! something new.
     displayName: 'Run a one-line script'
