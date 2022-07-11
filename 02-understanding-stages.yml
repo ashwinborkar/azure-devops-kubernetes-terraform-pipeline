@@ -22,6 +22,7 @@ stages:
     - bash: echo build SecondJob
       displayName: 'Run a one-line script'
 - stage: Test
+  dependsOn: Build
   jobs:
   - job: FirstJob
     steps:
@@ -32,6 +33,7 @@ stages:
     - bash: echo Test SecondJob
       displayName: 'Run a one-line script'
 - stage: Prod
+  dependsOn: Build
   jobs:
   - job: FirstJob
     steps:
