@@ -24,6 +24,7 @@ stages:
     variables:
       environment: Dev
       displayName: 'Run a one-line script'
+      
 - stage: Test
   dependsOn: Build
   jobs:
@@ -36,6 +37,7 @@ stages:
     steps:
     - bash: echo Test SecondJob
       displayName: 'Run a one-line script'
+
 - stage: Prod
   dependsOn: Build
   jobs:
